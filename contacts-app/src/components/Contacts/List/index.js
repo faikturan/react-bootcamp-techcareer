@@ -12,6 +12,7 @@ function List({ contacts }) {
         );
     });
 
+    
     return (
         <div>
 
