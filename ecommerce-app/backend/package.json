@@ -13,7 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "boom": "^7.3.0",
     "ioredis": "^5.2.3",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.6.1"
   }
 }

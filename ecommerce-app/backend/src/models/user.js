@@ -21,3 +21,22 @@ const UserSchema = new Schema({
         enum: ["user", "admin"],
     },
     });
+
+    UserSchema.save("save", async function (next){
+        try {
+            const salt = await bcrypt.genSalt(10);
+            const hashed = await bcrypt.hash(this.password, salt);
+            this.password = hashed;
+        } catch (e) {
+            next(error);
+        }
+    });
+
+    UserSchema.methods.isValidPass = async function (pass){
+        return await bcrypt.compare(pass, this.password);
+    };
+
+    const User  = mongoose.model('user', UserSchema);
+
+    export default User;
+
