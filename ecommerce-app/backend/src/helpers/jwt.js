@@ -1,7 +1,7 @@
 import JWT from 'jsonwebtoken';
 import Boom from 'boom';
 
-import redis from './clients/redis';
+import redis from './clients/redis.js';
 
 const signAccessToken = (data) =>{
     return new Promise((resolve, reject) =>{

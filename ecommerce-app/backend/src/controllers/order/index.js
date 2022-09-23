@@ -23,6 +23,8 @@ const Create = async (req, res, next) => {
         });
 
         const savedData = await order.save(); 
+
+        res.json(savedData);
     } catch (e) {
         next(e);
     }
@@ -39,6 +41,19 @@ const List = async (req, res, next) => {
 };
 
 const GetMyOrders = async (req, res, next) => {
-    
+    const {user_id} = req.payload;
+try {
+    const orders = await Order.findById(user_id).populate('purchase_item');
+
+    res.json(orders);
+} catch (e) {
+    next(e);
 }
+};
+
+export default {
+    Create,
+    List,
+    GetMyOrders,
+};
 
