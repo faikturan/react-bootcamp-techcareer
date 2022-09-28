@@ -44,10 +44,20 @@ function Products() {
         </Grid>
 
         <Flex mt="10" justifyContent="center">
-            
+            <Button
+            onClick={()=> fetchNextPage()}
+            isLoading={isFetchingNextPage}
+            disabled={!hasNextPage || isFetchingNextPage}
+            >
+                {isFetchingNextPage
+                ? "Loading more..."
+                : hasNextPage
+                ? "Load More"
+                :"Nothing more to load"}
+            </Button>
         </Flex>
     </div>
-  )
+  );
 }
 
 export default Products
