@@ -16,7 +16,7 @@ const createDecks = deck => {
     const newDeck = shuffleDeck(deck)
 
     const deck1Cards = newDeck.slice(0, newDeck.length / 2)
-    const deck2Cards = newDeck.slice(0, newDeck.length / 2)
+    const deck2Cards = newDeck.slice(newDeck.length / 2)
 
     const deck1Total = totalPoints(deck1Cards)
     const deck2Total = totalPoints(deck2Cards)
@@ -32,8 +32,13 @@ const createDecks = deck => {
 }
 
 const Pokegame = ({ data }) => {
+    const [deck1, deck2] = createDecks(data)
   return (
-    <div>Pokegame</div>
+    <div className="Pokegame">
+    <Pokedex deck={deck1} />
+    <hr />
+    <Pokedex deck={deck2} />
+    </div>
   )
 }
 
