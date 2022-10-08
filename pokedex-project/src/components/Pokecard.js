@@ -1,5 +1,5 @@
 import React from 'react'
-import './Pokecard';
+import './Pokecard.css';
 
 
 const padId = id => {
