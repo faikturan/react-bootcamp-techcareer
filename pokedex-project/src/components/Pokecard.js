@@ -16,8 +16,9 @@ const Pokecard = ({ pokemon }) => {
       )}.png`}
       alt={pokemon.name}
    />
-   <div className="Pokecard">
-
+   <div className="Pokecard__info">
+    <p>Type: {pokemon.type}</p>
+    <p>EXP: {pokemon.base_experience}</p>
    </div>
 
   </div>
