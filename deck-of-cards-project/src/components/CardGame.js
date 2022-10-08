@@ -48,6 +48,13 @@ export class CardGame extends Component {
         Gimme a Card
       </button>
       
+      <p>Cards Remaining: {cardsRemaining}</p>
+      <div className="CardGame__cards">
+      {cards.map(card => (
+        <Card {...card} key={card.code} />
+      ))}
+
+      </div>
       </div>
     )
   }
