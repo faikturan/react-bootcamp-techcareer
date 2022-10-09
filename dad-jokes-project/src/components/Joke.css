@@ -1,0 +1,86 @@
+.Joke {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    font-weight: 400;
+    padding: 1rem;
+  }
+  
+  .Joke__voting {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    margin-right: 1rem;
+  }
+  
+  .fa-arrow-up,
+  .fa-arrow-down {
+    cursor: pointer;
+    transition: transform 400ms, color 400ms;
+    font-size: 1.2rem;
+  }
+  .fa-arrow-up:hover {
+    transform: translateY(-4px);
+    color: lime;
+  }
+  .fa-arrow-down:hover {
+    transform: translateY(4px);
+    color: red;
+  }
+  
+  .Joke__num-votes {
+    /* padding: 1rem; */
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    margin: 0 5px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Joke__text {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin-right: 1rem;
+    /* font-size: 1.2rem; */
+  }
+  
+  .Joke__emoji {
+    margin-left: auto;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Joke__emoji i {
+    border-radius: 50%;
+    box-shadow: 0 10px 38px rgba(0, 0, 0, 0.2), 0 10px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Joke__emoji:hover i {
+    animation: spin 0.7s ease-in-out 0s;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    30% {
+      transform: rotate(20deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    80% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
