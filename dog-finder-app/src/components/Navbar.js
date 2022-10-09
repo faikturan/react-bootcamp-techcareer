@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { NavLink, Link } from "react-router-dom";
+import 'bootstrap/js/src/collapse.js';
 
 class Navbar extends Component {
   render() {
@@ -25,6 +26,7 @@ class Navbar extends Component {
         aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
         </button>
+        
         <div className="navbar-toggler-icon">
         <ul className="collapse navbar-collapse" id="navbar">
             <li className="nav-item">
